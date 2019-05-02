@@ -1,0 +1,22 @@
+<div>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend avatars">
+      <button class="avatar-choice-btn ${this.color} btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false"><span>${this.avatar}</span><i></i></button>
+      <div class="dropdown-menu avatar-choice">
+        ${this.avatarChoices[this.type].map(x => `<div class="dropdown-item"><span>${x}</span></div>`).join('')}
+      </div>
+    </div>
+    <div class="input-group-prepend">
+      <button class="type-choice-btn ${this.color} btn btn-outline-dark dropdown-toggle" type="button" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">${this.type}</button>
+      <div class="dropdown-menu type-choice">
+        <div class="dropdown-item">Människa</div>
+        <div role="separator" class="dropdown-divider"></div>
+        <div class="dropdown-item">Bot</div>
+        <div class="dropdown-item">Dum bot</div>
+      </div>
+    </div>
+    <input type="text" class="form-control" maxlength="10" value="${this.name}" placeholder="Namn (2-10 tecken)">
+  </div>
+</div>

@@ -1,0 +1,122 @@
+[
+  {
+    "description": "  As user I would like the app to detect all ways of winning (horizantal, vertical, diagonal in two directions).",
+    "elements": [
+      {
+        "id": "detect-win;horizontal-win",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Horizontal win",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "that I goto the game page",
+            "result": {
+              "status": "passed",
+              "duration": 3720399400
+            },
+            "line": 5,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:9"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose to play as two human players",
+            "result": {
+              "status": "passed",
+              "duration": 2326784900
+            },
+            "line": 6,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:13"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "with two different names",
+            "result": {
+              "status": "passed",
+              "duration": 2171091100
+            },
+            "line": 7,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:31"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "press the Börja spela-button",
+            "result": {
+              "status": "passed",
+              "duration": 1020981799
+            },
+            "line": 8,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:39"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the game should start",
+            "result": {
+              "status": "passed",
+              "duration": 2044625100
+            },
+            "line": 9,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:45"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "the first player plays 4 bricks in a row horizontally",
+            "result": {
+              "status": "passed",
+              "duration": 5093929800
+            },
+            "line": 12,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:55"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "he/she should win",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 13
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 123843800
+            },
+            "hidden": true,
+            "match": {
+              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "detect-win",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Detect win",
+    "tags": [],
+    "uri": "C:/Users/August/Downloads/testdesign/four-with-bot/features/detects-win.feature"
+  }
+]

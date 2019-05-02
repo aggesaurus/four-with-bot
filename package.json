@@ -1,0 +1,16 @@
+{
+  "name": "rep-html",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "node node_modules/selenium-cucumber-js/index.js & exit 0"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "jsonflex": "^1.0.10",
+    "selenium-cucumber-js": "^1.6.2"
+  }
+}

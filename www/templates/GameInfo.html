@@ -1,0 +1,34 @@
+<div class="game-info">
+  ${!this.game.currentPlayer || this.game.won || this.game.draw ? '' : `
+    <h3 class="mb-3 text-center">
+      <div class="d-inline-block text-center mr-3 avatar-coin ${this.game.currentPlayer.color}">
+        ${this.game.currentPlayer.avatar}
+      </div>
+      ${this.game.currentPlayer.name}, drag ${this.game.moveNo}
+    </h3>
+  `}
+  ${!this.game.won ? '' : `
+    <h3 class="mb-3 text-center">
+      <div class="d-inline-block text-center mr-3 avatar-coin ${this.game.currentPlayer.color}">
+        ${this.game.currentPlayer.avatar}
+      </div>
+      <span>${this.game.currentPlayer.name} vann, efter ${this.game.moveNo} drag!</span>
+    </h3>
+  `}
+  ${!this.game.draw ? '' : `
+    <h3 class="mb-3 text-center">
+      <div class="d-inline-block text-center mr-3 avatar-coin red">
+        ${this.game.players[0].avatar}
+      </div>
+      Det blev oavgjort!
+      <div class="d-inline-block text-center ml-3 avatar-coin yellow">
+        ${this.game.players[1].avatar}
+      </div>
+    </h3>
+  `}
+  ${!this.game.won && !this.game.draw ? '' : `
+    <div class="text-center mb-3">
+      <button class="again-btn btn btn-primary d-inline-block">Spela igen</button>
+    </div>
+  `}
+</div>

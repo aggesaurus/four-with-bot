@@ -1,0 +1,152 @@
+body > div {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.board {
+  visibility: hidden;
+  margin: 0 auto;
+  padding: 2%;
+  background-color: blue;
+  border-radius: 5%;
+  cursor: pointer;
+}
+
+.board.shown {
+  visibility: visible;
+}
+
+.slot {
+  width: 14.28%;
+}
+
+.slot > div {
+  padding-top: 100%;
+  position:relative;
+}
+
+.slot > div > div {
+  position:absolute;
+  top:5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: white;
+  border: 5px solid #00c;
+}
+
+.human-move .slot.marked.empty {
+  opacity: 0.7;
+}
+
+.human-move .slot.marked.empty.row0 > div > div:after {
+  position:absolute;
+  top: -60%;
+  text-align: center;
+  margin-left: 7%;
+  font-size: 250%;
+  content: "👇";
+}
+
+.slot.red  > div > div {
+  background-color: red;
+  animation: blink .2s 0s 1;
+  border-style: double;
+}
+
+.slot.yellow > div > div {
+  background-color: yellow;
+  animation: blink .2s 0s 1;
+  border-style: double;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.slot.won > div > div > div {
+  position:absolute;
+  top:40%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: black;
+  animation: blink-won 2s 0s infinite;
+}
+
+@keyframes blink-won {
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.type-choice-btn {
+  width: 120px;
+}
+
+.type-choice-btn.red, .avatar-choice-btn.red {
+  background-color: red;
+  color: #eee;
+}
+
+.type-choice-btn.yellow, .avatar-choice-btn.yellow {
+  background-color: yellow;
+}
+
+.type-choice-btn:hover {
+  background-color: black;
+}
+
+.avatars span {
+  font-size: 20px !important;
+}
+
+.avatars .dropdown-menu {
+  min-width: 0px;
+  max-width: 120px;
+}
+
+.avatar-choice-btn i {
+  margin-left: 30px;
+}
+
+.avatar-choice-btn span {
+  position: absolute;
+  display: block;
+}
+
+.avatar-coin {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-top: -8px;
+}
+
+.avatar-coin.red {
+  background-color: red;
+}
+
+.avatar-coin.yellow {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 600px) {
+  .game-info span {
+    font-size: 1.2rem;
+  }
+}
+
+.methods {
+  margin-top: 30px;
+  color: #666;
+}

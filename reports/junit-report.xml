@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="detect-win;horizontal-win" tests="7" failures="0" skipped="1">
+        <properties>
+            <property name="URI" value="C:/Users/August/Downloads/testdesign/four-with-bot/features/detects-win.feature">
+            </property>
+        </properties>
+        <testcase name="Given that I goto the game page" classname="detect-win;horizontal-win" time="3.7203994">
+        </testcase>
+        <testcase name="When I choose to play as two human players" classname="detect-win;horizontal-win" time="2.3267849">
+        </testcase>
+        <testcase name="And with two different names" classname="detect-win;horizontal-win" time="2.1710911">
+        </testcase>
+        <testcase name="And press the Börja spela-button" classname="detect-win;horizontal-win" time="1.020981799">
+        </testcase>
+        <testcase name="Then the game should start" classname="detect-win;horizontal-win" time="2.0446251">
+        </testcase>
+        <testcase name="When the first player plays 4 bricks in a row horizontally" classname="detect-win;horizontal-win" time="5.0939298">
+        </testcase>
+        <testcase name="Then he/she should win" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
+        </testcase>
+    </testsuite>
+</testsuites>

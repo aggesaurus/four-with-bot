@@ -1,0 +1,15 @@
+<div class="game">
+  ${this.board ? `
+    ${this.info}
+    ${this.board}
+  ` :  `
+    <h3 class="mb-3 text-center">Hur ska vi spela?</h3>
+    <p class="text-center">Välj avatarer, grad av mänsklighet och namn!</p>
+    ${this.players}
+    <div>
+      <button class="begin-btn btn btn-primary float-right" 
+      ${this.players[0].name.length > 1 && this.players[1].name.length > 1 ? '' : 'disabled'}>Börja spela</button>
+      <button class="reset-btn btn btn-secondary float-right mr-3">Återställ</button>
+    </div>
+  `}
+</div>
