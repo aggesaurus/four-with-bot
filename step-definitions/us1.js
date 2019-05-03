@@ -55,9 +55,6 @@ module.exports = function(){
         await sleep(sleepTime * 2);
       });
 
-      this.When(/^I get two different avatars$/, async function () { 
-      });
-
       this.When(/^I press the 'Börja spela' button$/, async function () {
         let beginButton = await $('.begin-btn');
         beginButton.click();

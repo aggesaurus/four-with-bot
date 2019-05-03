@@ -4,7 +4,6 @@ Scenario: filling in the information
     Given that I am on the game-page
     When I choose to play as red human and yellow bot
     And enter two different names
-    And I get two different avatars
     And I press the 'Börja spela' button
     Then the game should start
 
