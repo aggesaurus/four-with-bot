@@ -1,8 +1,11 @@
-let { $, sleep } = require('./funcs');
+let {$, sleep} = require('./funcs');
 
 let sleepTime = 500;
 
-module.exports = function () {
+module.exports = function(){
+ 
+  // Background
+
   this.Given(/^that I goto the game page$/, async function () {
     await helpers.loadPage('http://localhost:3000/game');
   });
@@ -53,16 +56,33 @@ module.exports = function () {
 
     let slots = await $('.slot'); 
     await slots[0].click();
-    await sleep(sleepTime * 10);
+    await sleep(sleepTime * 2);
     await slots[6].click();
-    await sleep(sleepTime*10);
-
+    await sleep(sleepTime*2);
+    await slots[1].click();
+    await sleep(sleepTime * 2);
+    await slots[5].click();
+    await sleep(sleepTime * 2);
+    await slots[2].click();
+    await sleep(sleepTime * 2);
+    await slots[4].click();
+    await sleep(sleepTime * 2);
+    await slots[3].click();
+    await sleep(sleepTime * 10);
+    
     // MORE TO WRITE HERE!
 
   });
 
   this.Then(/^he\/she should win$/,async function () {
-    
+    await sleep(sleepTime * 2);
+    let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));
+    let getmessageWin = await messageWin.getText();
+    await sleep(sleepTime * 2);
+    assert.equal(getmessageWin, 'HumanP1 vann, efter 4 drag!', 'The red play should win');
+    await sleep(sleepTime * 2);
+ 
+    //body > div > main > div > div.game-info > h3 > span
   });
 
 }
