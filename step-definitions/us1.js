@@ -42,7 +42,6 @@ module.exports = function(){
     }
       });
 
-
       this.When(/^enter two different names$/, async function () {
         await sleep(sleepTime * 2);
         //await driver.findElement(By.css('body > div > main > div > div:nth-child(3) > div > input')).sendKeys("HumanP1");
