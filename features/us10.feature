@@ -18,8 +18,8 @@ Scenario: Vertical win
  
 Scenario: Diagonal win (left to right)
   When the first player plays 4 bricks in a diagonally (left to right)
-  Then he/she should win
+  Then he/she is gonna be a winner
  
-Scenario: Diagonal win (right to left)
-  When the first player plays 4 bricks in a diagonally (right to left)
-  Then he/she should win
+#Scenario: Diagonal win (right to left)
+#  When the first player plays 4 bricks in a diagonally (right to left)
+#  Then he/she should win

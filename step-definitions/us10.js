@@ -1,23 +1,23 @@
-let {$, sleep} = require('./funcs');
+let { $, sleep } = require('./funcs');
 
 let sleepTime = 500;
 
-module.exports = function(){
- 
+module.exports = function () {
+
   // Background
 
   this.Given(/^that I goto the game page$/, async function () {
     await helpers.loadPage('http://localhost:3000/game');
   });
-  
+
   this.When(/^I choose to play as two human players$/, async function () {
-    let typeChoiceButtons = await $('.type-choice-btn' );
-    for(let typeChoiceButton of typeChoiceButtons){
+    let typeChoiceButtons = await $('.type-choice-btn');
+    for (let typeChoiceButton of typeChoiceButtons) {
       await typeChoiceButton.click();
       let choices = await $('.dropdown-menu.type-choice.show .dropdown-item');
-      for(let choice of choices){
+      for (let choice of choices) {
         let text = await choice.getText();
-        if(text === 'Människa'){
+        if (text === 'Människa') {
           await choice.click();
           // we MUST break because the dom changes after click
           // and erases the old menu.. (tricky...)
@@ -54,11 +54,11 @@ module.exports = function(){
 
   this.When(/^the first player plays (\d+) bricks in a row horizontally$/, async function (fillBrick) {
 
-    let slots = await $('.slot'); 
+    let slots = await $('.slot');
     await slots[0].click();
     await sleep(sleepTime * 2);
     await slots[6].click();
-    await sleep(sleepTime*2);
+    await sleep(sleepTime * 2);
     await slots[1].click();
     await sleep(sleepTime * 2);
     await slots[5].click();
@@ -69,20 +69,113 @@ module.exports = function(){
     await sleep(sleepTime * 2);
     await slots[3].click();
     await sleep(sleepTime * 10);
-    
-    // MORE TO WRITE HERE!
 
   });
 
-  this.Then(/^he\/she should win$/,async function () {
+  this.Then(/^he\/she should win$/, async function () {
     await sleep(sleepTime * 2);
     let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));
     let getmessageWin = await messageWin.getText();
     await sleep(sleepTime * 2);
     assert.equal(getmessageWin, 'HumanP1 vann, efter 4 drag!', 'The red play should win');
     await sleep(sleepTime * 2);
- 
-    //body > div > main > div > div.game-info > h3 > span
+
   });
+
+  //Scenario 2
+
+  this.When(/^the first player plays (\d+) bricks in a row vertical$/, async function (fillBrick) {
+
+    //    let slots = await $('.slot'); 
+    let slots = await $('.slot');
+    await slots[0].click();
+    await sleep(sleepTime * 2);
+    await slots[6].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[0].click();
+    await sleep(sleepTime * 2);
+    await slots[6].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[0].click();
+    await sleep(sleepTime * 2);
+    await slots[6].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[0].click();
+    await sleep(sleepTime * 2);
+    await slots[6].click();
+    await sleep(sleepTime * 2);
+  });
+
+  this.Then(/^he\/she will win$/, async function () {
+    await sleep(sleepTime * 2);
+    let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));
+    let getmessageWin = await messageWin.getText();
+    await sleep(sleepTime * 2);
+    getmessageWin = getmessageWin.slice(0,12);
+    assert.equal(getmessageWin, 'HumanP1 vann', 'The red play should win');
+    await sleep(sleepTime * 2);
+  });
+
+  //scenario 3
+
+  this.When(/^the first player plays (\d+) bricks in a diagonally \(left to right\)$/, async function (hola) {
+    let slots = await $('.slot');
+
+    await slots[0].click();
+    await sleep(sleepTime * 2);
+    await slots[1].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[1].click();
+    await sleep(sleepTime * 2);
+    await slots[2].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await sleep(sleepTime * 2);
+    await slots[2].click();
+    await sleep(sleepTime * 2);
+    await slots[3].click();
+    slots = await $('.slot');
+
+    await sleep(sleepTime * 2);
+    await slots[2].click();
+    slots = await $('.slot');
+    await sleep(sleepTime * 2);
+    await slots[3].click();
+    slots = await $('.slot');
+
+    await slots[2].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[1].click();
+    await sleep(sleepTime * 2);
+
+    slots = await $('.slot');
+    await slots[3].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+    await slots[3].click();
+    await sleep(sleepTime * 2);
+
+  });
+
+  this.Then(/^he\/she is gonna be a winner$/, async function () {
+    await sleep(sleepTime * 2);
+    let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));
+    let getmessageWin = await messageWin.getText();
+    await sleep(sleepTime * 2);
+    assert.equal(getmessageWin, 'HumanP1 vann, efter 6 drag!', 'The red play should win');
+    await sleep(sleepTime * 2);
+  });
+
 
 }
