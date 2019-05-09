@@ -221,6 +221,7 @@ module.exports = function () {
 
   });
 
+//Raden är bortkommenterad   
 /*  this.Then(/^he\/she is gonna be a winner$/, async function () {
     await sleep(sleepTime * 2);
     let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));

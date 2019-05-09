@@ -23,3 +23,6 @@ Scenario: Diagonal win (left to right)
 Scenario: Diagonal win (right to left)
   When the first player plays 4 bricks in a diagonally (right to left)
   Then he/she is gonna be a winner
+
+
+# Kommentar för att genomföra push 
