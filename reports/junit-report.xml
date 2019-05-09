@@ -1,25 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-    <testsuite name="detect-win;horizontal-win" tests="7" failures="0" skipped="1">
+    <testsuite name="detect-win;horizontal-win" tests="7" failures="0" skipped="7">
         <properties>
-            <property name="URI" value="C:/Users/August/Downloads/testdesign/four-with-bot/features/detects-win.feature">
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/detects-win.feature">
             </property>
         </properties>
-        <testcase name="Given that I goto the game page" classname="detect-win;horizontal-win" time="3.7203994">
+        <testcase name="Given that I goto the game page" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When I choose to play as two human players" classname="detect-win;horizontal-win" time="2.3267849">
+        <testcase name="When I choose to play as two human players" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="And with two different names" classname="detect-win;horizontal-win" time="2.1710911">
+        <testcase name="And with two different names" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="And press the Börja spela-button" classname="detect-win;horizontal-win" time="1.020981799">
+        <testcase name="And press the Börja spela-button" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="Then the game should start" classname="detect-win;horizontal-win" time="2.0446251">
+        <testcase name="Then the game should start" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
-        <testcase name="When the first player plays 4 bricks in a row horizontally" classname="detect-win;horizontal-win" time="5.0939298">
+        <testcase name="When the first player plays 4 bricks in a row horizontally" classname="detect-win;horizontal-win">
+            <skipped message="">
+            </skipped>
         </testcase>
         <testcase name="Then he/she should win" classname="detect-win;horizontal-win">
             <skipped message="">
             </skipped>
+        </testcase>
+    </testsuite>
+    <testsuite name="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/us4.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have loaded the game-page" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.021623969">
+        </testcase>
+        <testcase name="When I choose red Dum bot and yellow as Bot" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.332223646">
+        </testcase>
+        <testcase name="And I fill the name for both players" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.263064687">
+        </testcase>
+        <testcase name="And I press play button to start the game" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.022891459">
+        </testcase>
+        <testcase name="Then the two bots should play automatically" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.004389004">
+        </testcase>
+        <testcase name="And a message should show who is is the winner" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.033735003">
+        </testcase>
+    </testsuite>
+    <testsuite name="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/us4.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have loaded the game-page" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.164571832">
+        </testcase>
+        <testcase name="When I choose red Dum bot and yellow as Bot" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.317067456">
+        </testcase>
+        <testcase name="And I fill the name for both players" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.16802214">
+        </testcase>
+        <testcase name="And I press play button to start the game" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.02084171">
+        </testcase>
+        <testcase name="Then the two bots should play automatically" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.003717137">
+        </testcase>
+        <testcase name="And a message should show who is is the winner" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.036124815">
+        </testcase>
+    </testsuite>
+    <testsuite name="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/us4.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have loaded the game-page" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.109444963">
+        </testcase>
+        <testcase name="When I choose red Dum bot and yellow as Bot" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.307947704">
+        </testcase>
+        <testcase name="And I fill the name for both players" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.151369098">
+        </testcase>
+        <testcase name="And I press play button to start the game" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.033478024">
+        </testcase>
+        <testcase name="Then the two bots should play automatically" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.000963795">
+        </testcase>
+        <testcase name="And a message should show who is is the winner" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.033029372">
+        </testcase>
+    </testsuite>
+    <testsuite name="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" tests="6" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/us4.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have loaded the game-page" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.007286618">
+        </testcase>
+        <testcase name="When I choose red Dum bot and yellow as Bot" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.340486261">
+        </testcase>
+        <testcase name="And I fill the name for both players" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.164699289">
+        </testcase>
+        <testcase name="And I press play button to start the game" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.020835812">
+        </testcase>
+        <testcase name="Then the two bots should play automatically" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.000364711">
+        </testcase>
+        <testcase name="And a message should show who is is the winner" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.034333759">
+        </testcase>
+    </testsuite>
+    <testsuite name="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" tests="7" failures="0" skipped="0">
+        <properties>
+            <property name="URI" value="/Users/Setareh/Desktop/four-with-bot/features/us4.feature">
+            </property>
+        </properties>
+        <testcase name="Given I have loaded the game-page" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.100877742">
+        </testcase>
+        <testcase name="When I choose red Dum bot and yellow as Bot" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="2.320555044">
+        </testcase>
+        <testcase name="And I fill the name for both players" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.16838976">
+        </testcase>
+        <testcase name="And I press play button to start the game" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.022734593">
+        </testcase>
+        <testcase name="Then the two bots should play automatically" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="14.005415675">
+        </testcase>
+        <testcase name="And a message should show who is is the winner" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="3.037219789">
+        </testcase>
+        <testcase name="And I verify who is the best player" classname="i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot" time="0.000436506">
         </testcase>
     </testsuite>
 </testsuites>

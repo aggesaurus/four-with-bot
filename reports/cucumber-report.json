@@ -13,78 +13,54 @@
             "keyword": "Given ",
             "name": "that I goto the game page",
             "result": {
-              "status": "passed",
-              "duration": 3720399400
+              "status": "undefined"
             },
-            "line": 5,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:9"
-            }
+            "line": 5
           },
           {
             "arguments": [],
             "keyword": "When ",
             "name": "I choose to play as two human players",
             "result": {
-              "status": "passed",
-              "duration": 2326784900
+              "status": "undefined"
             },
-            "line": 6,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:13"
-            }
+            "line": 6
           },
           {
             "arguments": [],
             "keyword": "And ",
             "name": "with two different names",
             "result": {
-              "status": "passed",
-              "duration": 2171091100
+              "status": "undefined"
             },
-            "line": 7,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:31"
-            }
+            "line": 7
           },
           {
             "arguments": [],
             "keyword": "And ",
             "name": "press the Börja spela-button",
             "result": {
-              "status": "passed",
-              "duration": 1020981799
+              "status": "undefined"
             },
-            "line": 8,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:39"
-            }
+            "line": 8
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "name": "the game should start",
             "result": {
-              "status": "passed",
-              "duration": 2044625100
+              "status": "undefined"
             },
-            "line": 9,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:45"
-            }
+            "line": 9
           },
           {
             "arguments": [],
             "keyword": "When ",
             "name": "the first player plays 4 bricks in a row horizontally",
             "result": {
-              "status": "passed",
-              "duration": 5093929800
+              "status": "undefined"
             },
-            "line": 12,
-            "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\step-definitions\\detects-win.js:55"
-            }
+            "line": 12
           },
           {
             "arguments": [],
@@ -100,11 +76,11 @@
             "keyword": "After ",
             "result": {
               "status": "passed",
-              "duration": 123843800
+              "duration": 1950419881
             },
             "hidden": true,
             "match": {
-              "location": "C:\\Users\\August\\Downloads\\testdesign\\four-with-bot\\node_modules\\selenium-cucumber-js\\runtime\\world.js:250"
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
             }
           }
         ],
@@ -117,6 +93,534 @@
     "line": 1,
     "name": "Detect win",
     "tags": [],
-    "uri": "C:/Users/August/Downloads/testdesign/four-with-bot/features/detects-win.feature"
+    "uri": "/Users/Setareh/Desktop/four-with-bot/features/detects-win.feature"
+  },
+  {
+    "elements": [
+      {
+        "description": "Background:",
+        "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Play the game between red Dum bot and yellow Bot",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have loaded the game-page",
+            "result": {
+              "status": "passed",
+              "duration": 2021623969
+            },
+            "line": 5,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose red Dum bot and yellow as Bot",
+            "result": {
+              "status": "passed",
+              "duration": 2332223646
+            },
+            "line": 6,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I fill the name for both players",
+            "result": {
+              "status": "passed",
+              "duration": 3263064687
+            },
+            "line": 7,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I press play button to start the game",
+            "result": {
+              "status": "passed",
+              "duration": 14022891459
+            },
+            "line": 8,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:57"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the two bots should play automatically",
+            "result": {
+              "status": "passed",
+              "duration": 14004389004
+            },
+            "line": 9,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "a message should show who is is the winner",
+            "result": {
+              "status": "passed",
+              "duration": 3033735003
+            },
+            "line": 10,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 150649495
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "Background:",
+        "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "Play the game between red Dum bot and yellow Bot",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have loaded the game-page",
+            "result": {
+              "status": "passed",
+              "duration": 2164571832
+            },
+            "line": 14,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose red Dum bot and yellow as Bot",
+            "result": {
+              "status": "passed",
+              "duration": 2317067456
+            },
+            "line": 15,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I fill the name for both players",
+            "result": {
+              "status": "passed",
+              "duration": 3168022140
+            },
+            "line": 16,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I press play button to start the game",
+            "result": {
+              "status": "passed",
+              "duration": 14020841710
+            },
+            "line": 17,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:57"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the two bots should play automatically",
+            "result": {
+              "status": "passed",
+              "duration": 14003717137
+            },
+            "line": 18,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "a message should show who is is the winner",
+            "result": {
+              "status": "passed",
+              "duration": 3036124815
+            },
+            "line": 19,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 144712919
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "Background:",
+        "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Play the game between red Dum bot and yellow Bot",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have loaded the game-page",
+            "result": {
+              "status": "passed",
+              "duration": 2109444963
+            },
+            "line": 23,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose red Dum bot and yellow as Bot",
+            "result": {
+              "status": "passed",
+              "duration": 2307947704
+            },
+            "line": 24,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I fill the name for both players",
+            "result": {
+              "status": "passed",
+              "duration": 3151369098
+            },
+            "line": 25,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I press play button to start the game",
+            "result": {
+              "status": "passed",
+              "duration": 14033478024
+            },
+            "line": 26,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:57"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the two bots should play automatically",
+            "result": {
+              "status": "passed",
+              "duration": 14000963795
+            },
+            "line": 27,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "a message should show who is is the winner",
+            "result": {
+              "status": "passed",
+              "duration": 3033029372
+            },
+            "line": 28,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 104175929
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "Background:",
+        "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Play the game between red Dum bot and yellow Bot",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have loaded the game-page",
+            "result": {
+              "status": "passed",
+              "duration": 2007286618
+            },
+            "line": 32,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose red Dum bot and yellow as Bot",
+            "result": {
+              "status": "passed",
+              "duration": 2340486261
+            },
+            "line": 33,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I fill the name for both players",
+            "result": {
+              "status": "passed",
+              "duration": 3164699289
+            },
+            "line": 34,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I press play button to start the game",
+            "result": {
+              "status": "passed",
+              "duration": 14020835812
+            },
+            "line": 35,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:57"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the two bots should play automatically",
+            "result": {
+              "status": "passed",
+              "duration": 14000364711
+            },
+            "line": 36,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "a message should show who is is the winner",
+            "result": {
+              "status": "passed",
+              "duration": 3034333759
+            },
+            "line": 37,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 141445398
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "Background:",
+        "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game;play-the-game-between-red-dum-bot-and-yellow-bot",
+        "keyword": "Scenario",
+        "line": 39,
+        "name": "Play the game between red Dum bot and yellow Bot",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have loaded the game-page",
+            "result": {
+              "status": "passed",
+              "duration": 2100877742
+            },
+            "line": 41,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:11"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I choose red Dum bot and yellow as Bot",
+            "result": {
+              "status": "passed",
+              "duration": 2320555044
+            },
+            "line": 42,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I fill the name for both players",
+            "result": {
+              "status": "passed",
+              "duration": 3168389760
+            },
+            "line": 43,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:47"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I press play button to start the game",
+            "result": {
+              "status": "passed",
+              "duration": 14022734593
+            },
+            "line": 44,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:57"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the two bots should play automatically",
+            "result": {
+              "status": "passed",
+              "duration": 14005415675
+            },
+            "line": 45,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:63"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "a message should show who is is the winner",
+            "result": {
+              "status": "passed",
+              "duration": 3037219789
+            },
+            "line": 46,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:68"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "I verify who is the best player",
+            "result": {
+              "status": "passed",
+              "duration": 436506
+            },
+            "line": 48,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/step-definitions/us4.js:83"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "After ",
+            "result": {
+              "status": "passed",
+              "duration": 132712569
+            },
+            "hidden": true,
+            "match": {
+              "location": "/Users/Setareh/Desktop/four-with-bot/node_modules/selenium-cucumber-js/runtime/world.js:250"
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "i-want-to-verify-if-dum-bot-is-a-worse-player-than-bot-by-playing-the-game",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "I want to verify if Dum bot is a worse player than Bot by playing the game",
+    "tags": [],
+    "uri": "/Users/Setareh/Desktop/four-with-bot/features/us4.feature"
   }
 ]
