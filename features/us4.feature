@@ -1,3 +1,4 @@
+
 Feature: I want to verify if Dum bot is a worse player than Bot by playing the game
 
 Scenario: Play the game between red Dum bot and yellow Bot 

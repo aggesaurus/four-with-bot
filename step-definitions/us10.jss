@@ -177,5 +177,59 @@ module.exports = function () {
     await sleep(sleepTime * 2);
   });
 
+  this.When(/^the first player plays (\d+) bricks in a diagonally \(right to left\)$/, async function (hola) {
+    let slots = await $('.slot');
+
+    await slots[6].click();
+    await sleep(sleepTime * 2);
+    await slots[5].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[5].click();
+    await sleep(sleepTime * 2);
+    await slots[4].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await sleep(sleepTime * 2);
+    await slots[4].click();
+    await sleep(sleepTime * 2);
+    await slots[3].click();
+    slots = await $('.slot');
+
+    await sleep(sleepTime * 2);
+    await slots[4].click();
+    slots = await $('.slot');
+    await sleep(sleepTime * 2);
+    await slots[3].click();
+    slots = await $('.slot');
+
+    await slots[4].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+
+    await slots[5].click();
+    await sleep(sleepTime * 2);
+
+    slots = await $('.slot');
+    await slots[3].click();
+    await sleep(sleepTime * 2);
+    slots = await $('.slot');
+    await slots[3].click();
+    await sleep(sleepTime * 2);
+
+  });
+
+//Raden är bortkommenterad   
+/*  this.Then(/^he\/she is gonna be a winner$/, async function () {
+    await sleep(sleepTime * 2);
+    let messageWin = await driver.findElement(by.css('body > div > main > div > div:nth-of-type(1) > h3 > span'));
+    let getmessageWin = await messageWin.getText();
+    await sleep(sleepTime * 2);
+    assert.equal(getmessageWin, 'HumanP1 vann, efter 6 drag!', 'The red play should win');
+    await sleep(sleepTime * 2);
+  });*/
+
 
 }
