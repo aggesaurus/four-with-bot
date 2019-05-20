@@ -73,7 +73,7 @@ async function protoPlay(){
 }
 
 //Tar reda på vad boten(gula) spelar i solvern och return en siffra som kan användas för att flytta bricka i gamesolver
-async function solverPlay(){
+/*async function solverPlay(){
     let theBoard2 = await arrayFromSolver();
     let x=0;
     for(let i=0; i<42; i++){ 
@@ -120,8 +120,8 @@ async function solverPlay(){
     }
    
     return perfectNumber2; //används i solver för att klicka vad boten gör
-  } */
-}
+  } 
+} */
 
 
 async function boardToArray(){
@@ -237,27 +237,34 @@ module.exports = function () {
   
 
   this.When(/^two bots have played until someone wins$/, async function () {
-    await sleep(sleepTime * 2);
+
+    for (let i = 0; i<42; i++){
+    let messageWin = await $$('#solution_header');
+    let getmessageWin = await messageWin.getText();
+    getmessageWin = getmessageWin.slice(7,10);
+    console.log(getmessageWin);
+    if (getmessageWin === 'won'){
+      break;
+    }
     
+    await sleep(sleepTime * 4);
     let myNumber = await protoPlay(); //kallar på min protoPlay funktionen
     let newBoard = await $$('.board');
     await newBoard[myNumber].click();
-    await sleep(sleepTime * 2);
+    await sleep(sleepTime * 4);
     let yButton = await $$('#player_2');
     await yButton.click();
-
-    await sleep(sleepTime * 2);
+    await sleep(sleepTime * 4);
     //let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
     let solverBoard = await $('.slot');
    let solverNumber = await arrayFromSolver()
     await solverBoard[solverNumber].click();  //Fusk, bara för att simulera gul bricka i prototypen
-    await sleep(sleepTime * 6);
-   
-   
+    await sleep(sleepTime * 10);
     myNumber = await protoPlay(); //kallar på min protoPlay funktionen
-    await sleep(sleepTime * 2);
+    await sleep(sleepTime * 4);
     await newBoard[myNumber].click();
-   
+    
+    }
   });
 
 
