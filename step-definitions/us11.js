@@ -13,14 +13,7 @@ let myArray2 = [];
 let myNewArray2 = [];
 let gamesolverDriver;
 
-let test = []; /*= [
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0],
-  [0, 0, 0, 0, 0, 0]]; */
+let test = [];
 
 
 
@@ -37,9 +30,9 @@ async function protoPlay(){
    }
   }
   
-  console.log("board", myArray);
+  //console.log("board", myArray);
   myNewArray = [...new Set(myArray)]; //Tar bort dubbletter vilket rättar till arrayen
-  console.log("board", myNewArray);
+  //console.log("board", myNewArray);
   
   let perfectNumber;
 
@@ -239,32 +232,35 @@ module.exports = function () {
   this.When(/^two bots have played until someone wins$/, async function () {
 
     for (let i = 0; i<42; i++){
-    let messageWin = await $$('#solution_header');
-    let getmessageWin = await messageWin.getText();
-    getmessageWin = getmessageWin.slice(7,10);
-    console.log(getmessageWin);
-    if (getmessageWin === 'won'){
-      break;
+      let messageWin = await $$('#solution_header');
+      let getmessageWin = await messageWin.getText();
+      getmessageWin = getmessageWin.slice(7,10);
+      console.log(getmessageWin);
+      // driver.executeScript('console.log("round", ' + i + ')')
+      // gamesolverDriver.executeScript('console.log("round", ' + i + ')')
+      if (getmessageWin === 'won'){
+        break;
+      }
+      
+      await sleep(sleepTime * 2);
+      let myNumber = await protoPlay(); //kallar på min protoPlay funktionen
+      await sleep(sleepTime * 2);
+      let newBoard = await $$('.board');
+      await newBoard[myNumber].click();
+      await sleep(sleepTime * 2);
+      // let yButton = await $$('#player_2');
+      // await yButton.click();
+      // await sleep(sleepTime * 4);
+      //let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
+      let solverBoard = await $('.slot');
+      let solverNumber = await arrayFromSolver()
+      await solverBoard[solverNumber].click();  
+      await sleep(sleepTime * 2);
+      // myNumber = await protoPlay(); //kallar på min protoPlay funktionen
+      // await sleep(sleepTime * 4);
+      // await newBoard[myNumber].click();
     }
-    
-    await sleep(sleepTime * 4);
-    let myNumber = await protoPlay(); //kallar på min protoPlay funktionen
-    let newBoard = await $$('.board');
-    await newBoard[myNumber].click();
-    await sleep(sleepTime * 4);
-    let yButton = await $$('#player_2');
-    await yButton.click();
-    await sleep(sleepTime * 4);
-    //let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
-    let solverBoard = await $('.slot');
-   let solverNumber = await arrayFromSolver()
-    await solverBoard[solverNumber].click();  //Fusk, bara för att simulera gul bricka i prototypen
-    await sleep(sleepTime * 10);
-    myNumber = await protoPlay(); //kallar på min protoPlay funktionen
-    await sleep(sleepTime * 4);
-    await newBoard[myNumber].click();
-    
-    }
+
   });
 
 
