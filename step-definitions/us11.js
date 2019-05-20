@@ -68,8 +68,6 @@ async function protoPlay() {
 }
 
 
-
-
 async function boardToArray() {
   let boardArray = [];
   let slots = await $('.slot'); // 42 slots
@@ -213,11 +211,7 @@ module.exports = function () {
       // await sleep(sleepTime * 4);
       // await newBoard[myNumber].click();
 
-      if (getmessageWin === 'Yellow won') {
-        u++; //räknar vinster för Yellow
-
-      }
-
+     
     }
 
   });
@@ -228,26 +222,30 @@ module.exports = function () {
     let getmessageWin = await messageWin.getText();
     getmessageWin = getmessageWin.slice(0, 10);
     //console.log(getmessageWin);
+    if (getmessageWin === 'Yellow won') {
+      u++; //räknar vinster för Yellow
+    }
+
     assert.equal(getmessageWin, 'Yellow won', 'Yellow player did not win')
+
 
   });
 
   this.Then(/^the games refreshed$/, async function () {
     let sleepTime = 500;
-    //let raknareRed = -1;
     myArray = [];
     myNewArray = [];
     myArray2 = [];
     myNewArray2 = [];
-    //let gamesolverDriver;
-    u = 0; //räknar vinster för solvern yellow
+   // u = 0;
     test = [];
-    //await driver.refresh();
-    //await gamesolverDriver.refresh();
+    
 
   });
 
-
+  this.Then(/^I verify who is the best player$/, async function () {
+    assert.equal(u, 3, 'The Bot player should win 3 times');
+  });
 
 }
 

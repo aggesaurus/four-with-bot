@@ -28,4 +28,6 @@ Feature:
     When I choose to play as human and bot in the gamesolver
     When two bots have played until someone wins
     Then the gamesolver bot should always win
+
+    And I verify who is the best player
   
