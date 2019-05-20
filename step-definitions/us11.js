@@ -148,8 +148,8 @@ async function arrayFromSolver(){
   //console.log('solverSearchString',x);
   // let y = x.slice(0,1);
    console.log('solverSearchString',last);
-
-   return last -1;
+  let send = last - 1
+   return send;
 }
 
 
@@ -247,9 +247,10 @@ module.exports = function () {
     await yButton.click();
 
     await sleep(sleepTime * 2);
-    let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
+    //let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
     let solverBoard = await $('.slot');
-    await solverBoard[3].click();  //Fusk, bara för att simulera gul bricka i prototypen
+   let solverNumber = await arrayFromSolver()
+    await solverBoard[solverNumber].click();  //Fusk, bara för att simulera gul bricka i prototypen
     await sleep(sleepTime * 6);
    
    
