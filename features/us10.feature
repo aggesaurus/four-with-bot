@@ -11,7 +11,7 @@ Background:
 Scenario: Horizontal win
   When the first player plays 4 bricks in a row horizontally
   Then he/she should win
- 
+
 Scenario: Vertical win
   When the first player plays 4 bricks in a row vertical
   Then he/she should win
