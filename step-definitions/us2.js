@@ -7,28 +7,45 @@ let sleepTime = 500;
 let blueRobot;
 
 module.exports = function () {
-  //let x = 0;
+  let x = 0;
   this.Given(/^I am on the game\-page$/, async function () {
     await sleep(sleepTime);
     await helpers.loadPage('http://localhost:3000/game');
   });
 
-  this.When(/^I choose an avatar for the red player$/, async function () {
-    let typeChoiceButton = await $('.avatar-choice-btn');
-    await typeChoiceButton[0].click();
-    manBlack = await driver.findElement(By.css('body > div > main > div > div:nth-of-type(1) > div > div:nth-of-type(1) > div > div:nth-of-type(2) > span'));
-    await manBlack.click();
-    await sleep(5000);
+  this.When(/^I choose two different avatars for both players$/, async function () {
+    let avatarChoiceButtons = await $('.avatar-choice-btn');
+    for(let avatarChoiceButton of avatarChoiceButtons){
+      await avatarChoiceButton.click();
+      let avatarChoices = await $('.dropdown-menu.avatar-choice.show .dropdown-item');
+      for(let avatarChoice of avatarChoices){
+        let avatar = await avatarChoice.getText();
+
+       if(x===0)
+       {
+            if(avatar === '👦🏽'){
+                 x++;
+                await avatarChoice.click();
+                break;  
+          }
+       }
+
+       if(x===1)
+       {
+            if(avatar === '👾'){
+                x++;
+                await avatarChoice.click();
+                break;  
+            }
+       }          
+
+      }
+      await sleep(sleepTime * 2);
+    }
 
   });
 
-  this.When(/^I choose another avatar for the yellow player$/, async function () {
-    let typeChoiceButton2 = await $('.avatar-choice-btn');
-    await typeChoiceButton2[1].click();
-    blueRobot = await driver.findElement(By.css('body > div > main > div > div:nth-of-type(2) > div > div:nth-of-type(1) > div > div:nth-of-type(3) > span'));
-    await blueRobot.click();
-    await sleep(3000);
-  });
+
 
   this.Then(/^the two avatars are chosen$/, async function () {
 

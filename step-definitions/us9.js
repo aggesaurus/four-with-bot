@@ -45,10 +45,14 @@ module.exports = function () {
 
 
     this.When(/^enter two different names$/, async function () {
-        sleepTime;
-        firstName = await driver.findElement(By.css('body > div > main > div > div:nth-child(3) > div > input')).sendKeys("HumanP1");
-        await driver.findElement(By.css('body > div > main > div > div:nth-child(4) > div > input')).sendKeys("BootP1");
-        await sleep(3000);
+        await sleep(sleepTime * 2);
+
+        let inputFields = await $('input[placeholder="Namn (2-10 tecken)"]');
+        await inputFields[0].sendKeys('HumanP1');
+        await sleep(sleepTime * 2);
+
+        await inputFields[1].sendKeys('BootP1');
+        await sleep(sleepTime * 2);
     });
 
     this.When(/^I get two different avatars$/, async function () {
