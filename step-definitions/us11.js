@@ -6,17 +6,10 @@ let { $, sleep } = require('./funcs');
 const { Builder } = require('selenium-webdriver');
 
 let sleepTime = 500;
-//let raknareRed = -1;
 let myArray = [];
 let myNewArray = [];
-let myArray2 = [];
-let myNewArray2 = [];
 let gamesolverDriver;
 let u = 0; //räknar vinster för solvern yellow
-
-let test = [];
-
-
 
 function $$(cssSelector) {
   return $(cssSelector, gamesolverDriver);
@@ -32,9 +25,7 @@ async function protoPlay() {
     }
   }
 
-  //console.log("board", myArray);
   myNewArray = [...new Set(myArray)]; //Tar bort dubbletter vilket rättar till arrayen
-  //console.log("board", myNewArray);
 
   let perfectNumber;
 
@@ -64,7 +55,7 @@ async function protoPlay() {
       console.log('Somethings wrong');
   }
 
-  return perfectNumber; //används i solver för att klicka vad boten gör
+  return perfectNumber; //används i solver för att klicka vad den röda boten gör
 }
 
 
@@ -85,21 +76,13 @@ async function boardToArray() {
 async function arrayFromSolver() {
   let solverSearchString = await gamesolverDriver.executeScript("return window.top.location.search");
   let solverBoard = await gamesolverDriver.executeScript("return window.top.board");
-  //console.log('solverSearchString', solverSearchString);
-  //console.log('solverBoard', solverBoard[3]);
-  //let x = solverSearchString.slice(5,7)
   let last = solverSearchString.charAt(solverSearchString.length - 1);
-  //console.log('solverSearchString',x);
-  // let y = x.slice(0,1);
-  //console.log('solverSearchString', last);
   let send = last - 1
   return send;
 }
 
 
 module.exports = function () {
-
-  // Background
 
   this.Given(/^that I goto the game page$/, async function () {
     await helpers.loadPage('http://localhost:3000/game');
@@ -149,12 +132,6 @@ module.exports = function () {
   });
 
 
-  // After having done a small change in funcs.js
-  // so that $ can use any driver - as a second argument
-  // I write my own function $$ that can be used instead of writing
-  // gamesolverDriver.findElements(By.css('selector'));
-
-
   this.Given(/^that we are on the gamesolver page$/, async function () {
     // creating a new driver
     gamesolverDriver = await new Builder().forBrowser('chrome').build();
@@ -169,49 +146,27 @@ module.exports = function () {
     await sleep(sleepTime * 5);
   });
 
-  // Now we only have to write two different functions (or at least understand)
-  // how to dectect which column that was played as the latest move in
-  // 1) our app/the prototype
-  // 2) the gamesolver/perfect app
-  //
-  // Then we can start to fake being a human but sending the other bots
-  // move so the two bots can meet automatically
-  //
-  // Then can we test if the perfect bot always win
-
-
-
   this.When(/^two bots have played until someone wins$/, async function () {
 
     for (let i = 0; i < 42; i++) {
       let messageWin = await $$('#solution_header');
       let getmessageWin = await messageWin.getText();
       getmessageWin = getmessageWin.slice(7, 10);
-      //console.log(getmessageWin);
-      // driver.executeScript('console.log("round", ' + i + ')')
-      // gamesolverDriver.executeScript('console.log("round", ' + i + ')')
       if (getmessageWin === 'won') {
         break;
       }
 
       await sleep(sleepTime * 2);
-      let myNumber = await protoPlay(); //kallar på min protoPlay funktionen
+      let myNumber = await protoPlay(); //kallar på vår protoPlay funktionen
       await sleep(sleepTime * 2);
       let newBoard = await $$('.board');
       await newBoard[myNumber].click();
       await sleep(sleepTime * 2);
 
-      // await sleep(sleepTime * 4);
-      //let solverNumber = await solverPlay(); //kallar på min solverPlay funktionen
       let solverBoard = await $('.slot');
       let solverNumber = await arrayFromSolver()
       await solverBoard[solverNumber].click();
       await sleep(sleepTime * 2);
-      // myNumber = await protoPlay(); //kallar på min protoPlay funktionen
-      // await sleep(sleepTime * 4);
-      // await newBoard[myNumber].click();
-
-     
     }
 
   });
@@ -221,13 +176,11 @@ module.exports = function () {
     let messageWin = await $$('#solution_header');
     let getmessageWin = await messageWin.getText();
     getmessageWin = getmessageWin.slice(0, 10);
-    //console.log(getmessageWin);
     if (getmessageWin === 'Yellow won') {
       u++; //räknar vinster för Yellow
     }
 
     assert.equal(getmessageWin, 'Yellow won', 'Yellow player did not win')
-
 
   });
 
@@ -235,16 +188,10 @@ module.exports = function () {
     let sleepTime = 500;
     myArray = [];
     myNewArray = [];
-    myArray2 = [];
-    myNewArray2 = [];
-   // u = 0;
-    test = [];
-    
-
   });
 
   this.Then(/^I verify who is the best player$/, async function () {
-    assert.equal(u, 3, 'The  yellow solver Bot player should win 3 times');
+    assert.equal(u, 3, 'The yellow solver Bot player should win 3 times');
   });
 
 }
