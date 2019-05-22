@@ -1,4 +1,4 @@
-Feature: I want to verify that the Bot is not playing identically on each turn
+Feature: I want to verify that the Bot is not playing identically on each turn in prototype game
 
 Scenario: Play the game between red Human and yellow Bot 
 Given I am on the four-in-a-row gamepage
