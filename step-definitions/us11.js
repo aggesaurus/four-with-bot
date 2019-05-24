@@ -191,7 +191,7 @@ module.exports = function () {
   });
 
   this.Then(/^I verify who is the best player$/, async function () {
-    assert.equal(u, 3, 'The yellow solver Bot player should win 3 times');
+    assert.equal(u, 10, 'The yellow solver Bot player should win 10 times');
   });
 
 }
